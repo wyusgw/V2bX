@@ -25,6 +25,7 @@ type rawNodeConfig struct {
 
 type ApiConfig struct {
 	APIHost      string `json:"ApiHost"`
+	APISendIP    string `json:"ApiSendIP"`
 	NodeID       int    `json:"NodeID"`
 	Key          string `json:"ApiKey"`
 	NodeType     string `json:"NodeType"`
