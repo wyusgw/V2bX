@@ -221,8 +221,8 @@ github.com/aziontech/azionapi-go-sdk v0.142.0 h1:1NOHXlC0/7VgbfbTIGVpsYn1THCugM4
 github.com/aziontech/azionapi-go-sdk v0.142.0/go.mod h1:cA5DY/VP4X5Eu11LpQNzNn83ziKjja7QVMIl4J45feA=
 github.com/baidubce/bce-sdk-go v0.9.235 h1:iAi+seH9w1Go2szFNzyGumahLGDsuYZ3i8hduX3qiM8=
 github.com/baidubce/bce-sdk-go v0.9.235/go.mod h1:zbYJMQwE4IZuyrJiFO8tO8NbtYiKTFTbwh4eIsqjVdg=
-github.com/beevik/ntp v1.4.4-0.20240716062501-06ef196b89ec h1:FzxY1QN55kkQrw72IvZiLprQGFXz4ecJj5yIxDkNWhk=
-github.com/beevik/ntp v1.4.4-0.20240716062501-06ef196b89ec/go.mod h1:Unr8Zg+2dRn7d8bHFuehIMSvvUYssHMxW3Q5Nx4RW5Q=
+github.com/beevik/ntp v1.5.0 h1:y+uj/JjNwlY2JahivxYvtmv4ehfi3h74fAuABB9ZSM4=
+github.com/beevik/ntp v1.5.0/go.mod h1:mJEhBrwT76w9D+IfOEGvuzyuudiW9E52U2BaTrMOYow=
 github.com/benbjohnson/clock v1.1.0/go.mod h1:J11/hYXuz8f4ySSvYwY0FKfm+ezbsZBKZxNJlLklBHA=
 github.com/benbjohnson/clock v1.3.0 h1:ip6w0uFQkncKQ979AypyG0ER7mqUSBdKLOgAle/AT8A=
 github.com/benbjohnson/clock v1.3.0/go.mod h1:J11/hYXuz8f4ySSvYwY0FKfm+ezbsZBKZxNJlLklBHA=
