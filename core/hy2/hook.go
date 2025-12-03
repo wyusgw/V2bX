@@ -7,7 +7,6 @@ import (
 	"github.com/InazumaV/V2bX/common/format"
 	"github.com/InazumaV/V2bX/limiter"
 	"github.com/apernet/hysteria/core/v2/server"
-	quic "github.com/apernet/quic-go"
 	"go.uber.org/zap"
 )
 
@@ -20,10 +19,10 @@ type HookServer struct {
 	ReportMinTrafficBytes int64
 }
 
-func (h *HookServer) TraceStream(stream quic.Stream, stats *server.StreamStats) {
+func (h *HookServer) TraceStream(stream server.HyStream, stats *server.StreamStats) {
 }
 
-func (h *HookServer) UntraceStream(stream quic.Stream) {
+func (h *HookServer) UntraceStream(stream server.HyStream) {
 }
 
 func (h *HookServer) LogTraffic(id string, tx, rx uint64) (ok bool) {

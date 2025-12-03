@@ -19,7 +19,6 @@ import (
 	"github.com/xtls/xray-core/features/inbound"
 	"github.com/xtls/xray-core/features/outbound"
 	"github.com/xtls/xray-core/features/routing"
-	statsFeature "github.com/xtls/xray-core/features/stats"
 	coreConf "github.com/xtls/xray-core/infra/conf"
 )
 
@@ -35,7 +34,6 @@ type Xray struct {
 	Server                    *core.Instance
 	ihm                       inbound.Manager
 	ohm                       outbound.Manager
-	shm                       statsFeature.Manager
 	dispatcher                *dispatcher.DefaultDispatcher
 	users                     *UserMap
 	nodeReportMinTrafficBytes map[string]int64
@@ -188,7 +186,6 @@ func (c *Xray) Start() error {
 	if err := c.Server.Start(); err != nil {
 		return err
 	}
-	c.shm = c.Server.GetFeature(statsFeature.ManagerType()).(statsFeature.Manager)
 	c.ihm = c.Server.GetFeature(inbound.ManagerType()).(inbound.Manager)
 	c.ohm = c.Server.GetFeature(outbound.ManagerType()).(outbound.Manager)
 	c.dispatcher = c.Server.GetFeature(routing.DispatcherType()).(*dispatcher.DefaultDispatcher)
@@ -201,7 +198,6 @@ func (c *Xray) Close() error {
 	defer c.access.Unlock()
 	c.ihm = nil
 	c.ohm = nil
-	c.shm = nil
 	c.dispatcher = nil
 	err := c.Server.Close()
 	if err != nil {
